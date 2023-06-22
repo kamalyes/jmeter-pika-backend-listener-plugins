@@ -1,9 +1,9 @@
-package io.kamalyes.jmeter.entity;
+package io.kamalyes.dtos;
 
 import lombok.Data;
 
 @Data
-public class TestSummary {
+public class TestSummaryDTO {
     private String project;
     private String env;
     private String batchNo;
@@ -16,4 +16,7 @@ public class TestSummary {
     private Long startTime;
     private Long endTime;
     private Long duration;
+    private String resultFileName;
+    private String samplerData;
+    private String threadName;
 }
