@@ -93,6 +93,10 @@ public class PikaBackendListenerClient extends AbstractBackendListenerClient {
         LoggerUtil.info(" ---- Test End ---- ");
     }
 
+    /**
+     * @param assertionResult
+     * @return
+     */
     private static ResponseAssertionResultDTO getResponseAssertionResult(AssertionResult assertionResult) {
         ResponseAssertionResultDTO responseAssertionResult = null;
         if (StringUtils.startsWith(assertionResult.getName(), "ErrorReportAssertion")) {

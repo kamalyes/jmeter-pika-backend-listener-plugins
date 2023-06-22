@@ -10,4 +10,12 @@ public class JMeterEngineCache {
      */
     public static ConcurrentHashMap<String, StandardJMeterEngine> runningEngine = new ConcurrentHashMap<>();
 
+    public static ConcurrentHashMap<String, StandardJMeterEngine> getRunningEngine() {
+        return runningEngine;
+    }
+
+    public static void setRunningEngine(ConcurrentHashMap<String, StandardJMeterEngine> runningEngine) {
+        JMeterEngineCache.runningEngine = runningEngine;
+    }
+
 }

@@ -1,5 +1,10 @@
 # JMeter Pika listener plugin
 
+![](https://img.shields.io/badge/JMeter-green)
+![](https://img.shields.io/badge/release-5.4.3-green)
+
+It needs to be used with the backend listener used by  [Pika Server](https://github.com/kamalyes/pika)
+
 ## Packaging
 
 Execute below mvn command. Make sure JAVA_HOME is set properly
@@ -16,7 +21,7 @@ mvn -B clean package -X "-Dmaven.test.skip=true -Dmaven.javadoc.skip=true"
 * Run JMeter again and got Listener.
 * Select from the dropdown item with the name '`io.kamalyes.jmeter.PikaBackendListenerClient`'.
   
-## Plugin configuration
+## 📌 Plugin configuration
 
 Let’s explain the plugin fields:
 
