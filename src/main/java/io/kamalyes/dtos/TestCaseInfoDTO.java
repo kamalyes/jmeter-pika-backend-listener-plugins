@@ -47,11 +47,36 @@ public class TestCaseInfoDTO {
     /**
      * 请求Body
      */
+    private String requestQuery;
+
+    /**
+     * 请求Body
+     */
     private String requestBody;
+
+    /**
+     * 请求头大小
+     */
+    private int headersSize = 0;
+
+    /**
+     * 请求体大小
+     */
+    private long bodySize = 0;
+
+
     /**
      * 响应Code
      */
     private String responseCode;
+    /**
+     * 响应时间
+     */
+    private long responseTime;
+    /**
+     * 响应包体大小
+     */
+    private long responseSize;
     /**
      * 响应Headers
      */

@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 import uvicorn
-
+import random
 app = FastAPI()
 
 @app.get("/")
@@ -9,7 +9,7 @@ def read_root():
 
 @app.get("/api/test")
 def read_item(keyword: str = None):
-    return {"keyword": keyword}
+    return {"keyword": f'{keyword}-{random.randint(1,155555)}'}
 
 
 if __name__ == "__main__":

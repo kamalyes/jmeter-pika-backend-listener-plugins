@@ -198,9 +198,9 @@ public class PikaBackendListenerClient extends AbstractBackendListenerClient {
                     httpSampleResult.getContentType())
                     && StringUtils.isNotEmpty(httpSampleResult.getResponseDataAsString())
                     && httpSampleResult.getResponseDataAsString().length() > size) {
-                testCaseInfo.setRequestBody("超过20M的RequestBody文件不入库!!!");
+                testCaseInfo.setResponseBody("超过20M的RequestBody文件不入库!!!");
             } else {
-                testCaseInfo.setRequestBody(httpSampleResult.getResponseDataAsString());
+                testCaseInfo.setResponseBody(httpSampleResult.getResponseDataAsString());
             }
             testCaseInfo.setErrorCount(httpSampleResult.getErrorCount());
             testCaseInfo.setSuccessful(httpSampleResult.isSuccessful());
@@ -209,7 +209,12 @@ public class PikaBackendListenerClient extends AbstractBackendListenerClient {
             testCaseInfo.setRequestSize(httpSampleResult.getSentBytes());
             testCaseInfo.setResponseCode(httpSampleResult.getResponseCode());
             testCaseInfo.setResponseHeader(httpSampleResult.getResponseHeaders());
-            testCaseInfo.setResponseBody(httpSampleResult.getResponseDataAsString());
+            testCaseInfo.setRequestQuery(httpSampleResult.getQueryString());
+            testCaseInfo.setRequestBody(httpSampleResult.getSamplerData());
+            testCaseInfo.setResponseSize(httpSampleResult.getResponseData().length);
+            testCaseInfo.setBodySize(httpSampleResult.getBodySizeAsLong());
+            testCaseInfo.setHeadersSize(httpSampleResult.getHeadersSize());
+            testCaseInfo.setResponseTime(httpSampleResult.getTime());
             testCaseInfo.setConnectTime(httpSampleResult.getConnectTime());
             testCaseInfo.setLatency(httpSampleResult.getLatency());
             testCaseInfo.setTotalAssertions(httpSampleResult.getAssertionResults().length);
