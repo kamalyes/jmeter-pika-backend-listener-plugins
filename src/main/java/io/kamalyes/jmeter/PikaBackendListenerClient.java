@@ -10,7 +10,6 @@ import com.mashape.unirest.http.HttpResponse;
 import com.mashape.unirest.http.JsonNode;
 import com.mashape.unirest.http.Unirest;
 import com.mashape.unirest.http.exceptions.UnirestException;
-
 import io.kamalyes.constants.HttpMethodConstants;
 import io.kamalyes.dtos.ErrorReportAssertionResultDTO;
 import io.kamalyes.dtos.ResponseAssertionResultDTO;

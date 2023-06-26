@@ -70,7 +70,9 @@ public class TestCaseInfoDTO {
      */
     private String responseCode;
     /**
-     * 响应时间
+     * 响应时间 jmeter 指向elapsedTime 即经过的时间(= Sample time = Load time = Response time )
+     * https://stackoverflow.com/questions/63449594/jmeter-sampler-result-understanding-load-time-connect-time-and-latency
+     *  https://jmeter.apache.org/usermanual/glossary.html
      */
     private long responseTime;
     /**
@@ -98,11 +100,13 @@ public class TestCaseInfoDTO {
      */
     private Boolean successful;
     /**
-     * 连接时间
+     * 连接时间 不常用，请求连接建立的时间，这个时间 < Latency time < Elapsed time
+
      */
     private long connectTime;
     /**
-     * 延迟
+     * 延迟时间 不常用，表示请求发送到刚开始接收响应时，这个时间<Elapsed time
+
      */
     private long latency;
     /**
